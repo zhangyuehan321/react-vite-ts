@@ -10,7 +10,8 @@ import './App.css'
 // import SuspenseNew from './components/SuspenseNew/SuspenseNew'
 // import { UseMemo } from './components/UseMemo/UseMemo'
 // import { UseState } from './components/UseState+UseReducer/useState'
-import { UseReducer } from './components/UseState+UseReducer/UseReducer'
+// import { UseReducer } from './components/UseState+UseReducer/UseReducer'
+import { Parent } from './components/UseContext/Parent'
 
 function App() {
   // const count = 0;
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <>
-      <UseReducer />
+      <Parent />
+      {/* <UseReducer /> */}
       {/* <UseState /> */}
       {/* <UseMemo />  */}
       {/* <SuspenseNew /> */}
