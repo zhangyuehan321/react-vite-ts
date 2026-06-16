@@ -1,9 +1,9 @@
 import { GrandChild } from './GrandChild';
 
-export const Child = ({ theme }: { theme: string }) => {
+export const Child = () => {
     return (
         <div>
-            <GrandChild theme={theme} />
+            <GrandChild />
         </div>
     )
 }

@@ -10,7 +10,7 @@ export const Parent = () => {
     return (
         <div>
             <ThemeContext.Provider value={{theme, toggleTheme}}>
-                <Child theme={theme}/>
+                <Child/>
                 <button onClick={toggleTheme}>Toggle Theme</button>
             </ThemeContext.Provider>
         </div>
