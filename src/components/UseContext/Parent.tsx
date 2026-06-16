@@ -1,4 +1,4 @@
-import { Child } from './child';
+import { Child } from './Child';
 import { useState } from 'react';
 import { ThemeContext } from './ThemeContext';
 
