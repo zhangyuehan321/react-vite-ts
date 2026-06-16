@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useReducer } from "react";
 
 // export const UseReducer = () => {
 //     const [info, setInfo] = useState({
@@ -23,18 +23,30 @@ import { useState } from "react";
 //action需要专门的方法完成状态值的更新，叫 reducer
 //结果 state， 驱动视图更新
 
+const initialState = {
+    name: 'John',
+    age: 20,
+}
+
+const reducer = (state: typeof initialState, action: { type: string, payload: any }) => {
+    switch (action.type) {
+        case 'updateName':
+            return { ...state, name: action.payload };
+        case 'updateAge':
+            return { ...state, age: Number(action.payload) };
+        default:
+            return state;
+    }
+}
 export const UseReducer = () => {
-    const [info, setInfo] = useState({
-        name: 'John',
-        age: 20,
-    });
+    const [info, dispatch] = useReducer(reducer, initialState);
 
     return (
         <div>
             <div>Name: {info.name}</div>
             <div>Age: {info.age}</div>
-            <input type="text" value={info.name} onChange={(ev) => setInfo({...info, name: ev.target.value})}/>
-            <input type="number" value={info.age} onChange={(ev) => setInfo({...info, age: parseInt(ev.target.value)})}/>
+            <input type="text" value={info.name} onChange={(ev) => dispatch({ type: 'updateName', payload: ev.target.value })}/>
+            <input type="number" value={info.age} onChange={(ev) => dispatch({ type: 'updateAge', payload: parseInt(ev.target.value) })}/>
         </div>
     )
 }
