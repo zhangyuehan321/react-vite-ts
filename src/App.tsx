@@ -14,7 +14,8 @@ import './App.css'
 // import { Parent } from './components/UseContext/Parent'
 // import { Memo } from './components/UseMemo/Memo'
 // import { CustomHooks } from './components/CustomHooks/index'
-import { List } from './components/TsHooks/List'
+// import { List } from './components/TsHooks/List'
+import { ZodDemo } from './components/ZodDemo/index'
 
 function App() {
   // const count = 0;
@@ -26,10 +27,11 @@ function App() {
 
   return (
     <>
-      <List
+      <ZodDemo />
+      {/* <List
         list={[{ id: 1, name: 'item1' }, { id: 2, name: 'item2' }]}
         onChange={(item) => console.log(item)}
-      />
+      /> */}
       {/* <CustomHooks /> */}
       {/* <Memo /> */}
       {/* <Parent /> */}
