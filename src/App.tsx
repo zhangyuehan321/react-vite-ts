@@ -26,7 +26,10 @@ function App() {
 
   return (
     <>
-      <List />
+      <List
+        list={[{ id: 1, name: 'item1' }, { id: 2, name: 'item2' }]}
+        onChange={(item) => console.log(item)}
+      />
       {/* <CustomHooks /> */}
       {/* <Memo /> */}
       {/* <Parent /> */}

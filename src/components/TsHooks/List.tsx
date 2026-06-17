@@ -5,16 +5,16 @@ interface ListProps<T> {
     list: T[];
     onChange: (item: T) => void;
 }
-export function List<T>({ list }: ListProps<T>) {
+export function List<T extends {id: number, name: string}>({ list, onChange }: ListProps<T>) {
     //初始化一个数组
     // const list = [1, 2, 3, 4, 5];
 
   return(
     <div>
-      {list.map(item => (
+      {list.map((item: T) => (
         <>
-        <div key={item}>{item}</div>
-        <button onClick={() => onChange?.(item as T)}>click</button>
+        <div key={item.id}>{item.name}</div>
+        <button onClick={() => onChange(item)}>click</button>
         </>
       ))}
     </div>
@@ -22,5 +22,5 @@ export function List<T>({ list }: ListProps<T>) {
 }
 
 export const ListDemo = () => {
-  return <List list={[1, 2, 3, 4, 5]} onChange={(item) => {console.log(item)}} />
+  return <List list={[{id: 1, name: 'item1'}, {id: 2, name: 'item2'}]} onChange={(item) => {console.log(item)}} />
 }
