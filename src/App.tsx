@@ -11,7 +11,8 @@ import './App.css'
 // import { UseMemo } from './components/UseMemo/UseMemo'
 // import { UseState } from './components/UseState+UseReducer/useState'
 // import { UseReducer } from './components/UseState+UseReducer/UseReducer'
-import { Parent } from './components/UseContext/Parent'
+// import { Parent } from './components/UseContext/Parent'
+import { Memo } from './components/UseMemo/memo'
 
 function App() {
   // const count = 0;
@@ -23,7 +24,8 @@ function App() {
 
   return (
     <>
-      <Parent />
+      <Memo />
+      {/* <Parent /> */}
       {/* <UseReducer /> */}
       {/* <UseState /> */}
       {/* <UseMemo />  */}
