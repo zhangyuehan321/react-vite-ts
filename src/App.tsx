@@ -12,7 +12,8 @@ import './App.css'
 // import { UseState } from './components/UseState+UseReducer/useState'
 // import { UseReducer } from './components/UseState+UseReducer/UseReducer'
 // import { Parent } from './components/UseContext/Parent'
-import { Memo } from './components/UseMemo/memo'
+// import { Memo } from './components/UseMemo/Memo'
+import { CustomHooks } from './components/CustomHooks/index'
 
 function App() {
   // const count = 0;
@@ -24,7 +25,8 @@ function App() {
 
   return (
     <>
-      <Memo />
+      <CustomHooks />
+      {/* <Memo /> */}
       {/* <Parent /> */}
       {/* <UseReducer /> */}
       {/* <UseState /> */}
