@@ -13,7 +13,8 @@ import './App.css'
 // import { UseReducer } from './components/UseState+UseReducer/UseReducer'
 // import { Parent } from './components/UseContext/Parent'
 // import { Memo } from './components/UseMemo/Memo'
-import { CustomHooks } from './components/CustomHooks/index'
+// import { CustomHooks } from './components/CustomHooks/index'
+import { List } from './components/TsHooks/List'
 
 function App() {
   // const count = 0;
@@ -25,7 +26,8 @@ function App() {
 
   return (
     <>
-      <CustomHooks />
+      <List />
+      {/* <CustomHooks /> */}
       {/* <Memo /> */}
       {/* <Parent /> */}
       {/* <UseReducer /> */}
